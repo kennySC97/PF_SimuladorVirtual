@@ -5,6 +5,38 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Bienvenido al Simulador Virtual</h1>
+    <p>Empecemos por configurar las maquinas</p>
 </div>
+
+<div class="container w-50 text-center d-flex flex-column">
+    <h3>Datos del Producto</h3>
+    <input class="mt-2" type="text" id="txt_nomProd" value="" placeholder="Nombre del Producto"/>
+    <input class="mt-2" type="text" id="txt_precioProd" value="" placeholder="precio del Producto final"/>
+</div>
+
+<div class="container w-100 d-flex flex-row mt-3">
+
+    <div class="col-6 text-center d-flex flex-column">
+        <h3>Maquina #1</h3>
+        <input class="mt-2" type="text" id="txt_nomMaq1" placeholder="Nombre" />        
+        <input class="mt-2" type="text" id="txt_costoOpMaq1" placeholder="Coste Operacion (en colones)" />        
+        <input class="mt-2" type="text" id="txt_tiempoRepMaq1" placeholder="Tiempo Reparacion (horas)" />        
+    </div>
+
+    <div class="col-6 text-center d-flex flex-column">
+        <h3>Maquina #2</h3>
+        <input class="mt-2" type="text" id="txt_nomMaq2" placeholder="Nombre" />        
+        <input class="mt-2" type="text" id="txt_costoOpMaq2" placeholder="Coste Operacion (en colones)" />        
+        <input class="mt-2" type="text" id="txt_tiempoRepMaq2" placeholder="Tiempo Reparacion (horas)" />        
+    </div>
+
+</div>
+
+<div class="container w-100 mt-3 text-center">
+    <button class="btn btn-primary w-25" onclick="prueba()">
+        Iniciar Simulación
+    </button>
+</div>
+
+<script></script>
