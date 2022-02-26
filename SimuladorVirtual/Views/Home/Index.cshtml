@@ -2,7 +2,7 @@
     ViewData["Title"] = "Inicio";
 }
 
-<div id="div_datos" class="container">   
+<div id="div_datos" style="display: block;" class="container">   
     <div class="text-center">
         <h1 class="display-4">Bienvenido al Simulador Virtual</h1>
         <p>Comencemos por configurar el producto y las maquinas de la simulación</p>
@@ -24,7 +24,7 @@
 
     <div class="container w-100 row">
 
-        <div class="col-4 d-flex flex-column align-items-center">
+        <div class="col-6 d-flex flex-column align-items-center">
             <h3>Maquina #1</h3>
             <label>
                 Nombre<br />
@@ -35,17 +35,16 @@
                 <input class="m-2" type="text" id="txt_costeMaq1" />
             </label>
             <label>
+                Cantidad de Producto<br />
+                <input class="m-2" type="text" id="txt_cantProdMaq1" />
+            </label>
+            <label>
                 Tiempo de Reparación<br />
                 <input class="m-2" type="text" id="txt_tiempoMaq1" />
             </label>
-            <label>
-                Probabilidad de Fallo<br />
-                <input class="m-2" type="text" id="txt_falloMaq1" />
-            </label>
-
         </div>
 
-        <div class="col-4 d-flex flex-column align-items-center">
+        <div class="col-6 d-flex flex-column align-items-center">
             <h3>Maquina #2</h3>
             <label>
                 Nombre<br />
@@ -56,32 +55,12 @@
                 <input class="m-2" type="text" id="txt_costeMaq2" />
             </label>
             <label>
+                Cantidad de Producto<br />
+                <input class="m-2" type="text" id="txt_cantProdMaq2" />
+            </label>
+            <label>
                 Tiempo de Reparación<br />
                 <input class="m-2" type="text" id="txt_tiempoMaq2" />
-            </label>
-            <label>
-                Probabilidad de Fallo<br />
-                <input class="m-2" type="text" id="txt_falloMaq2" />
-            </label>
-        </div>
-
-        <div class="col-4 d-flex flex-column align-items-center">
-            <h3>Maquina #3</h3>
-            <label>
-                Nombre<br />
-                <input class="m-2" type="text" id="txt_nomMaq3" />
-            </label>
-            <label>
-                Costo de Operación<br />
-                <input class="m-2" type="text" id="txt_costeMaq3" />
-            </label>
-            <label>
-                Tiempo de Reparación<br />
-                <input class="m-2" type="text" id="txt_tiempoMaq3" />
-            </label>
-            <label>
-                Probabilidad de Fallo<br />
-                <input class="m-2" type="text" id="txt_falloMaq3" />
             </label>
         </div>
 
@@ -90,7 +69,7 @@
     <div class="container d-flex flex-column flex-nowrap align-items-center" >
 
         <label>
-            Duración Total de la simulacion(horas) <br />
+            Duración Total de la simulacion(días) <br />
             <input class="mb-2 w-100" type="text" id="txt_duracion" />
         </label>
 
@@ -101,6 +80,30 @@
     </div>
 </div>
 
-<div id="div_simulacion" class="container" hidden>
+<div id="div_simulacion" class="container text-center w-100" style="display: none;">
+    <h2 id="id_titulo_simulacion"></h2>
+
+    <button class="btn btn-success" id="btn_iniciar" onclick="iniciarSimulacion()"> Iniciar Simulación </button>
+    <button style="display: none;" id="btn_pausar" class="btn btn-warning" onclick="pausar()"> Pausar </button>
+
+    <div class="container w-100 row d-flex flex-row flex-nowrap">   
+        <div class="col-6 d-flex flex-column align-items-center m-3" >
+            <h3 id="nomMaq1"></h3>
+            <h4 id="horasRepMaq1"></h4>
+            <h4 id="probFalloMaq1"></h4>
+            <h4>Estado: <span id="estadoMaq1" class="badge bg-success">Activa</span> </h4>
+        </div>
+        <div class="col-6 d-flex flex-column align-items-center m-3" >
+            <h3 id="nomMaq2"></h3>
+            <h4 id="horasRepMaq2"></h4>
+            <h4 id="probFalloMaq2"></h4>
+            <h4>Estado: <span id="estadoMaq2" class="badge bg-success">Activa</span> </h4>
+        </div>
+    </div>
+
+    <h3>Tiempo de simulacion</h3>
+    <h4 id="numIteracion"></h4>
+
+    <h2 id="fin" style="display: none;">Simulacion Terminada</h2>
 
 </div>
