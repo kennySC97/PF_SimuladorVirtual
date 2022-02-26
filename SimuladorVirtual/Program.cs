@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ProyectoFinal_Simulador
+namespace SimuladorVirtual
 {
     public class Program
     {

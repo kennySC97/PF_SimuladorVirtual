@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div id="div_datos" class="container">   
+    <div class="text-center">
+        <h1 class="display-4">Bienvenido al Simulador Virtual</h1>
+        <p>Comencemos por configurar el producto y las maquinas de la simulación</p>
+    </div>
+
+    <div class="container w-75 text-center d-flex flex-column">
+        <h3>Datos del Producto</h3>
+        <div class="text-left w-100 d-flex flex-row justify-content-center">
+            <label>
+                Nombre<br />
+                <input class="m-2" type="text" id="txt_nomProd" />
+            </label>
+            <label>
+                Costo Producción<br />
+                <input class="m-2" type="text" id="txt_costoProd" />
+            </label>
+        </div>
+    </div>
+
+    <div class="container w-100 row">
+
+        <div class="col-4 d-flex flex-column align-items-center">
+            <h3>Maquina #1</h3>
+            <label>
+                Nombre<br />
+                <input class="m-2" type="text" id="txt_nomMaq1" />
+            </label>
+            <label>
+                Costo de Operación<br />
+                <input class="m-2" type="text" id="txt_costeMaq1" />
+            </label>
+            <label>
+                Tiempo de Reparación<br />
+                <input class="m-2" type="text" id="txt_tiempoMaq1" />
+            </label>
+            <label>
+                Probabilidad de Fallo<br />
+                <input class="m-2" type="text" id="txt_falloMaq1" />
+            </label>
+
+        </div>
+
+        <div class="col-4 d-flex flex-column align-items-center">
+            <h3>Maquina #2</h3>
+            <label>
+                Nombre<br />
+                <input class="m-2" type="text" id="txt_nomMaq2" />
+            </label>
+            <label>
+                Costo de Operación<br />
+                <input class="m-2" type="text" id="txt_costeMaq2" />
+            </label>
+            <label>
+                Tiempo de Reparación<br />
+                <input class="m-2" type="text" id="txt_tiempoMaq2" />
+            </label>
+            <label>
+                Probabilidad de Fallo<br />
+                <input class="m-2" type="text" id="txt_falloMaq2" />
+            </label>
+        </div>
+
+        <div class="col-4 d-flex flex-column align-items-center">
+            <h3>Maquina #3</h3>
+            <label>
+                Nombre<br />
+                <input class="m-2" type="text" id="txt_nomMaq3" />
+            </label>
+            <label>
+                Costo de Operación<br />
+                <input class="m-2" type="text" id="txt_costeMaq3" />
+            </label>
+            <label>
+                Tiempo de Reparación<br />
+                <input class="m-2" type="text" id="txt_tiempoMaq3" />
+            </label>
+            <label>
+                Probabilidad de Fallo<br />
+                <input class="m-2" type="text" id="txt_falloMaq3" />
+            </label>
+        </div>
+
+    </div>
+
+    <div class="container d-flex flex-column flex-nowrap align-items-center" >
+
+        <label>
+            Duración Total de la simulacion(horas) <br />
+            <input class="mb-2 w-100" type="text" id="txt_duracion" />
+        </label>
+
+        <button class="btn w-25 btn-primary" onclick="postSimulacion()">
+            Cargar Datos
+        </button>
+
+    </div>
+</div>
+
+<div id="div_simulacion" class="container" hidden>
+
+</div>
